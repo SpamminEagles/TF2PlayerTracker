@@ -1,0 +1,3 @@
+# SourcePawn gitignore file
+.vscode/
+plugins/
