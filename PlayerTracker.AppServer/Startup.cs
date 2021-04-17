@@ -32,9 +32,10 @@ namespace PlayerTracker.AppServer
             services.AddSingleton<MongoDbContext, MongoDbContext>(sp =>
             {
                 var cf = sp.GetRequiredService<IConfiguration>();
-                var connString = cf.GetConnectionString("default");
+                string connString = cf.GetConnectionString("default");
+                string dbName = cf["DefaultDb"];
 
-                var cont = new MongoDbContext(connString);
+                var cont = new MongoDbContext(connString, dbName);
                 cont.Open();
 
                 return cont;

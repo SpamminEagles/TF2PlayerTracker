@@ -11,6 +11,8 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
+      //"launchBrowser": false
+      
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
