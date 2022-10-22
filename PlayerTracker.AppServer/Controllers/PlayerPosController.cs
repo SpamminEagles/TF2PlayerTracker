@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PlayerTracker.AppServer.Model;
 using PlayerTracker.AppServer.Services;
 
@@ -6,6 +7,7 @@ using PlayerTracker.AppServer.Services;
 
 namespace PlayerTracker.AppServer.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PlayerPosController : ControllerBase
